@@ -1,2 +1,46 @@
-# TinySharp Programming Language
-This is my attempt at designing a "very tiny" programming language, using Haskell. 
+
+
+# The TinySharp Language
+This is my attempt at building a "very tiny" programming language, using Haskell. 
+
+#### Features of Nano:
+- Arithmetic
+- Variables
+- Let-bindings
+- Functions
+- Recursion
+
+#### Nano: Arithmetic
+A grammar of arithmetic expressions:
+
+e ::= n
+    | e1 + e2
+    | e1 - e2
+    | e1 * e2
+
+#### Representing Expressions and Values
+
+data Expr = Num Int
+          | Add Expr Expr
+          | Sub Expr Expr
+          | Mul Expr Expr
+
+#### Evaluating Arithmetic Expressions
+We can now write a Haskell function to evaluate an expression:
+
+eval :: Expr -> Value
+eval (Num n)     = n
+eval (Add e1 e2) = eval e1 + eval e2
+eval (Sub e1 e2) = eval e1 - eval e2
+eval (Mul e1 e2) = eval e1 * eval e2
+
+
+#### Alternative representation
+Let’s factor out the operators into a separate type
+
+data Binop = Add | Sub | Mul
+
+data Expr = Num Int              -- number
+          | Bin Binop Expr Expr  -- binary expression
+
+
