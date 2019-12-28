@@ -3,14 +3,14 @@
 # The TinySharp Language
 This is my attempt at building a "very tiny" programming language, using Haskell. Work developed at UCSD for a CSE class.
 
-#### Features of Nano:
+#### Features of TinySharp:
 - Arithmetic
 - Variables
 - Let-bindings
 - Functions
 - Recursion
 
-#### Nano: Arithmetic
+#### TinySharp: Arithmetic
 A grammar of arithmetic expressions:
 
 e ::= n
