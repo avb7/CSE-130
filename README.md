@@ -1,5 +1,5 @@
 
-![Recommender Engine|Large](https://i.ibb.co/0qZBKr0/Group.png)
+![Recommender Engine|Large](https://i.ibb.co/RbGR6vB/Group-2.png)
 # The tinysharp Language
 This is my attempt at building a "very tiny" programming language, using Haskell. Work developed at UCSD for a CSE class.
 
