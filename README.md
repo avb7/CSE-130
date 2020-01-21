@@ -1,6 +1,6 @@
 
-
-# The TinySharp Language
+![Recommender Engine|Large](https://i.ibb.co/0qZBKr0/Group.png)
+# The tinysharp Language
 This is my attempt at building a "very tiny" programming language, using Haskell. Work developed at UCSD for a CSE class.
 
 #### Features of TinySharp:
