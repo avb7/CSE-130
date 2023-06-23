@@ -34,6 +34,7 @@ data Expr = Num Int             -- represents a number
           | Add Expr Expr       -- represents addition of two expressions
           | Sub Expr Expr       -- represents subtraction of two expressions
           | Mul Expr Expr       -- represents multiplication of two expressions
+```
 
 ## Evaluating Arithmetic Expressions
 Arithmetic expressions in TinySharp can be evaluated using the following Haskell function:
@@ -44,7 +45,7 @@ eval (Num n)     = n
 eval (Add e1 e2) = eval e1 + eval e2
 eval (Sub e1 e2) = eval e1 - eval e2
 eval (Mul e1 e2) = eval e1 * eval e2
-
+```
 
 ## Alternative Representation
 As an alternative, we can separate binary operations into a distinct type for a cleaner representation:
@@ -53,6 +54,7 @@ As an alternative, we can separate binary operations into a distinct type for a 
 data Binop = Add | Sub | Mul   -- represents binary operations
 data Expr = Num Int            -- represents a number
           | Bin Binop Expr Expr  -- represents a binary expression
+```
 
 This alternative representation abstracts the concept of binary operations, making the code more readable and manageable.
 
